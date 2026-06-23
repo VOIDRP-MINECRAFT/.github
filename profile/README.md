@@ -50,8 +50,8 @@
 | [voidrp-anticheat](https://github.com/VOIDRP-MINECRAFT/voidrp-anticheat) | Серверный античит: Speed, Fly, Reach, KillAura, CPS + mod-snapshot |
 | [voidrp-cpm-companion](https://github.com/VOIDRP-MINECRAFT/voidrp-cpm-companion) | Косметика через CPM: гранты, экипировка, compositing скинов |
 | [voidrp-auth-bridge](https://github.com/VOIDRP-MINECRAFT/voidrp-auth-bridge) | Бридж авторизации: play-ticket flow прямо в игре |
-| [voidrp-webgui](https://github.com/VOIDRP-MINECRAFT/voidrp-webgui) | Встроенный веб-интерфейс (мульти-версия) |
-| [voidrp-webgui-neoforge](https://github.com/VOIDRP-MINECRAFT/voidrp-webgui-neoforge) | Веб-GUI для NeoForge 1.21.1 |
+| [voidrp-webgui-neoforge](https://github.com/VOIDRP-MINECRAFT/voidrp-webgui-neoforge) | Встроенный Chromium WebGUI: открывает HTML-страницы поверх игры |
+| ~~[voidrp-webgui](https://github.com/VOIDRP-MINECRAFT/voidrp-webgui)~~ | _(архив — Fabric-форк, заменён voidrp-webgui-neoforge)_ |
 
 ### 🔌 Paper/Mohist плагины
 
