@@ -1,0 +1,68 @@
+@startuml VoidRP-Architecture
+!theme plain
+skinparam backgroundColor #FFFFFF
+skinparam roundcorner 10
+skinparam shadowing false
+skinparam defaultFontName Helvetica
+skinparam ArrowColor #6E40C9
+skinparam componentBackgroundColor #F6F8FA
+skinparam componentBorderColor #8957E5
+skinparam databaseBackgroundColor #EDE7F6
+skinparam nodeBorderColor #444C56
+title <b>VoidRP — Архитектура платформы</b>
+
+actor "Игрок" as player
+
+package "Клиент" #F3EEFB {
+  component "voidrp-launcher-vue\n<size:10>Electron · Vue 3 · .NET 8</size>" as launcher
+  component "voidrp-launcher-java\n<size:10>JavaFX 21 (альтернатива)</size>" as launcherj
+  node "Minecraft Client" as mc {
+    component "voidrp-webgui-neoforge\n<size:10>+ MCEF Chromium</size>" as wgui
+    component "auth-bridge\n<size:10>скины Abyss</size>" as authbridge
+    component "anticheat (client)" as acc
+  }
+}
+
+cloud "void-rp.ru" #EAF7EE {
+  component "voidrp-site\n<size:10>Vue 3 SPA</size>" as site
+  component "minecraft-backend\n<size:10>FastAPI</size>" as backend
+  database "PostgreSQL" as pg
+  database "Redis" as redis
+  folder "launcher/pack\n+ manifests" as packs
+}
+
+node "VoidRP — Mohist 1.21.1" as srv1 #FFF4E5 {
+  component "gamesync-plugin" as gsync
+  component "battlepass / daily-quests\nwealth-tax / mod-sell" as econ
+  component "anticheat · cpm-companion\nasync-ai · wg-region-guard" as srvmods1
+}
+
+node "Abyss — NeoForge 26.2 · offline" as srv2 #FBEAEA {
+  component "voidrp_claims\n<size:10>блок-приваты</size>" as claims
+  component "voidrp_abyss\n<size:10>bounty · killfeed</size>" as abyss
+  component "anticheat · auth-bridge\n<size:10>(26.2)</size>" as srvmods2
+}
+
+player --> launcher
+player ..> launcherj
+launcher --> backend : <b>play-ticket</b>\nauth (HTTPS)
+launcher --> packs : пак по SHA-256\n(8 потоков, HTTP/2)
+launcher --> mc : запуск JVM
+player --> site : браузер
+
+site --> backend : REST /api/v1\n<size:10>X-Server-Slug</size>
+backend --> pg
+backend --> redis
+backend ..> packs : генерация\nманифеста
+
+gsync --> backend : <b>X-Game-Auth-Secret</b>\nстатистика · экономика
+econ --> backend
+srvmods1 --> backend : violations\nmod-snapshot
+claims --> backend
+abyss --> backend
+srvmods2 --> backend
+
+wgui ..> gsync : plugin channels
+wgui --> site : /game-ui/*\n<size:10>webgui_token</size>
+authbridge --> backend : verify ticket
+@enduml

@@ -1,0 +1,51 @@
+@startuml VoidRP-Auth-Launch
+!theme plain
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam defaultFontName Helvetica
+skinparam ArrowColor #6E40C9
+skinparam sequenceLifeLineBorderColor #8957E5
+skinparam participantBorderColor #8957E5
+skinparam participantBackgroundColor #F6F8FA
+title <b>VoidRP — Логин, синхронизация и вход на сервер</b>
+
+actor Игрок as U
+participant "Лаунчер\n(CoreHost)" as L
+participant "Backend\nFastAPI" as B
+participant "CDN\npack/manifests" as C
+participant "Игровой\nсервер" as S
+
+== Авторизация ==
+U -> L : логин / пароль
+L -> B : POST /auth/login
+B --> L : JWT access + refresh
+note right of L : refresh хранится\nи ротируется
+
+== Выбор сервера и синхронизация пака ==
+U -> L : выбрать сервер (slug)
+L -> B : GET /servers/{slug}
+B --> L : host, port, manifest_url,\nprofile (NeoForge), features
+L -> C : GET manifest.json
+C --> L : список файлов (path, size, SHA-256, flags)
+loop до 8 файлов параллельно (HTTP/2)
+  L -> L : NeedsDownload? (hash-cache / size / SHA-256)
+  L -> C : GET файл (если нет / изменился / managed)
+  C --> L : байты → проверка SHA-256
+end
+note right of L : alwaysOverwrite — форс,\nmanaged — синк по хешу,\nconfig/ игрока — не трогаем
+
+== Play-ticket и запуск ==
+U -> L : «Играть»
+L -> B : POST /play-tickets (JWT)
+B --> L : одноразовый ticket (TTL)
+L -> S : запуск Minecraft → коннект (ticket)
+S -> B : verify ticket\n(X-Game-Auth-Secret)
+B --> S : профиль игрока (server_id)
+S --> U : вход в мир
+
+== В игре ==
+S -> B : синк статистики / экономики (по секрету сервера)
+U -> S : открыть WebGUI
+S -> U : webgui:open_web (url + webgui_token)
+U -> B : /game-ui/* (webgui_token)
+@enduml
