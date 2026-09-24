@@ -49,6 +49,12 @@
 ./gradlew shadowJar     # build/libs/voidrp-auth-1.0.0-all.jar
 ```
 
+### voidrp-client-fixes
+
+Гард для Jade компилируется против `libs/Jade-1.21.1-NeoForge-*.jar` (`compileOnly`, в репозиторий
+не коммитится). Положите этот файл с [Modrinth](https://modrinth.com/mod/jade) в `libs/` — CI
+скачивает ровно его через Modrinth API — и соберите `./gradlew build`.
+
 ### minecraft-backend
 
 ```bash
@@ -75,6 +81,22 @@ npm run build:core:dev:linux   # CoreHost (.NET 8)
 npm run build:electron
 npm run build:renderer
 ```
+
+## Релизы
+
+Во всех Gradle-репозиториях тег `v*` запускает тот же CI, и собранный jar прикладывается к
+GitHub-релизу с автоматическими release notes:
+
+```bash
+git tag v1.2.3 && git push origin v1.2.3
+```
+
+## Обновления зависимостей
+
+В каждом репозитории настроен Dependabot (`.github/dependabot.yml`): раз в неделю, по понедельникам,
+одним сгруппированным PR на экосистему — Gradle, npm, pip, NuGet и GitHub Actions. PR проходит тот же
+CI. Мажорные версии и сама платформа (Paper, NeoForge) в эти PR не попадают — их обновляют вручную
+вместе с версией сервера.
 
 ## Секреты
 
