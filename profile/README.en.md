@@ -94,7 +94,7 @@ Plain **Paper 26.2**: no mods, no modpack, no launcher required.
 
 <a id="screenshots"></a>
 
-## 🖼️ In-game screenshots
+## 🖼️ Screenshots
 
 ### 🌱 The Origins menu on a vanilla client
 
@@ -144,6 +144,23 @@ Not a mod and not a mock-up: every rectangle, letter and icon arrives from the s
 <img src="assets/ui-states-2.png" alt="Tabs, switches, tiles, notices, dialogs, dropdowns" width="100%">
 
 </details>
+
+### 🌐 Website, launcher and in-game pages
+
+<div align="center">
+<img src="assets/site-tour.gif" alt="void-rp.ru: home, servers, market, nations, top players and battle pass" width="100%">
+
+<sub>The <a href="https://void-rp.ru">void-rp.ru</a> website: home → servers → player market → nations → top players → battle pass</sub>
+</div>
+
+<table>
+<tr>
+<td width="50%"><img src="assets/launcher-tour.gif" alt="Launcher: sign-in, server choice, home, nation, rankings, settings"><br><sub><b>Launcher</b>: sign in → server → Play → nation → rankings → settings</sub></td>
+<td width="50%"><img src="assets/webgui-tour.gif" alt="WebGUI in game: menu, battle pass, quests, market"><br><sub><b>WebGUI</b> over the game on VoidRP: menu (F6) → battle pass → quests → market</sub></td>
+</tr>
+</table>
+
+<sub>The website, launcher and WebGUI were captured from local builds with demo data: nicknames, nations and prices are made up.</sub>
 
 <a id="voidrp-ui"></a>
 
