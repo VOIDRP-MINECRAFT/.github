@@ -16,11 +16,11 @@ actor "Игрок" as player
 package "Клиент" #F3EEFB {
   component "voidrp-launcher-vue\n<size:10>Electron · Vue 3 · .NET 8</size>" as launcher
   component "voidrp-launcher-java\n<size:10>JavaFX 21 (альтернатива)</size>" as launcherj
-  node "Minecraft Client" as mc {
+  node "Модовый клиент\n<size:10>NeoForge 1.21.1 · FTB Evolution</size>" as mc {
     component "voidrp-webgui-neoforge\n<size:10>+ MCEF Chromium</size>" as wgui
-    component "auth-bridge\n<size:10>скины Abyss</size>" as authbridge
-    component "anticheat (client)" as acc
+    component "voidrp-client-fixes\n<size:10>crash-guards</size>" as cfix
   }
+  node "Ванильный клиент\n<size:10>1.21.1 – 26.x, любой лаунчер</size>" as vmc
 }
 
 cloud "void-rp.ru" #EAF7EE {
@@ -31,23 +31,24 @@ cloud "void-rp.ru" #EAF7EE {
   folder "launcher/pack\n+ manifests" as packs
 }
 
-node "VoidRP — Mohist 1.21.1" as srv1 #FFF4E5 {
-  component "gamesync-plugin" as gsync
+node "VoidRP — Mohist 1.21.1 (модовый)" as srv1 #FFF4E5 {
+  component "gamesync-plugin\n<size:10>статистика · шоп · торговец</size>" as gsync
   component "battlepass / daily-quests\nwealth-tax / mod-sell" as econ
-  component "anticheat · cpm-companion\nasync-ai · wg-region-guard" as srvmods1
+  component "anticheat · auth-bridge · cpm-companion\nasync-ai · wg-region-guard" as srvmods1
 }
 
-node "Abyss — NeoForge 26.2 · offline" as srv2 #FBEAEA {
-  component "voidrp_claims\n<size:10>блок-приваты</size>" as claims
-  component "voidrp_abyss\n<size:10>bounty · killfeed</size>" as abyss
-  component "anticheat · auth-bridge\n<size:10>(26.2)</size>" as srvmods2
+node "Origins — Paper 26.2 (ванилла)" as srv2 #E8F1FB {
+  component "voidrp-auth-plugin\n<size:10>вход окнами Minecraft</size>" as authp
+  component "voidrp-ui\n<size:10>меню без модов</size>" as vui
 }
 
 player --> launcher
 player ..> launcherj
+player ..> vmc
 launcher --> backend : <b>play-ticket</b>\nauth (HTTPS)
 launcher --> packs : пак по SHA-256\n(8 потоков, HTTP/2)
 launcher --> mc : запуск JVM
+launcher ..> vmc : билет в адресе\nподключения
 player --> site : браузер
 
 site --> backend : REST /api/v1\n<size:10>X-Server-Slug</size>
@@ -55,14 +56,15 @@ backend --> pg
 backend --> redis
 backend ..> packs : генерация\nманифеста
 
+mc --> srv1
+vmc --> srv2
+
 gsync --> backend : <b>X-Game-Auth-Secret</b>\nстатистика · экономика
 econ --> backend
-srvmods1 --> backend : violations\nmod-snapshot
-claims --> backend
-abyss --> backend
-srvmods2 --> backend
+srvmods1 --> backend : violations · mod-snapshot\nverify ticket
+authp --> backend : /server/auth/game/*\n<size:10>пароль проверяет сайт</size>
+vui ..> vmc : bossbar-текст +\nresource pack
 
 wgui ..> gsync : plugin channels
 wgui --> site : /game-ui/*\n<size:10>webgui_token</size>
-authbridge --> backend : verify ticket
 @enduml
