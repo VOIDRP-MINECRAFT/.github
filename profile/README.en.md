@@ -5,7 +5,7 @@
 <br>
 
 [![Website](https://img.shields.io/badge/Website-void--rp.ru-7c4dff?style=for-the-badge&logo=googlechrome&logoColor=white)](https://void-rp.ru)
-[![Discord](https://img.shields.io/badge/Discord-community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/j2Dvxm8E)
+[![Discord](https://img.shields.io/badge/Discord-community-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Af855xa5wT)
 [![Telegram](https://img.shields.io/badge/Telegram-news-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/voidRPminecraft)
 [![Map](https://img.shields.io/badge/Map-BlueMap-0ea5e9?style=for-the-badge&logo=googlemaps&logoColor=white)](https://void-rp.ru/map)
 
@@ -287,6 +287,6 @@ Issues and pull requests are welcome — see [CONTRIBUTING](../CONTRIBUTING.md) 
 
 <div align="center">
 
-**[🌐 Website](https://void-rp.ru)** · **[🖥️ Servers](https://void-rp.ru/servers)** · **[📥 Launcher](https://void-rp.ru/download-launcher)** · **[🗺️ Map](https://void-rp.ru/map)** · **[💬 Discord](https://discord.gg/j2Dvxm8E)** · **[✈️ Telegram](https://t.me/voidRPminecraft)** · **[🟢 Modrinth](https://modrinth.com/plugin/voidrp-ui)**
+**[🌐 Website](https://void-rp.ru)** · **[🖥️ Servers](https://void-rp.ru/servers)** · **[📥 Launcher](https://void-rp.ru/download-launcher)** · **[🗺️ Map](https://void-rp.ru/map)** · **[💬 Discord](https://discord.gg/Af855xa5wT)** · **[✈️ Telegram](https://t.me/voidRPminecraft)** · **[🟢 Modrinth](https://modrinth.com/plugin/voidrp-ui)**
 
 </div>

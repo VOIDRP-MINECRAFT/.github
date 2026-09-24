@@ -5,7 +5,7 @@
 <br>
 
 [![Сайт](https://img.shields.io/badge/Сайт-void--rp.ru-7c4dff?style=for-the-badge&logo=googlechrome&logoColor=white)](https://void-rp.ru)
-[![Discord](https://img.shields.io/badge/Discord-сообщество-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/j2Dvxm8E)
+[![Discord](https://img.shields.io/badge/Discord-сообщество-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Af855xa5wT)
 [![Telegram](https://img.shields.io/badge/Telegram-новости-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/voidRPminecraft)
 [![Карта](https://img.shields.io/badge/Карта-BlueMap-0ea5e9?style=for-the-badge&logo=googlemaps&logoColor=white)](https://void-rp.ru/map)
 
@@ -470,7 +470,7 @@ window.webgui.postToServer("buy_clicked", JSON.stringify({ itemId: "iron_sword" 
 
 <div align="center">
 
-**[🌐 Сайт](https://void-rp.ru)** · **[🖥️ Серверы](https://void-rp.ru/servers)** · **[📥 Лаунчер](https://void-rp.ru/download-launcher)** · **[🗺️ Карта](https://void-rp.ru/map)** · **[💬 Discord](https://discord.gg/j2Dvxm8E)** · **[✈️ Telegram](https://t.me/voidRPminecraft)** · **[🟢 Modrinth](https://modrinth.com/plugin/voidrp-ui)**
+**[🌐 Сайт](https://void-rp.ru)** · **[🖥️ Серверы](https://void-rp.ru/servers)** · **[📥 Лаунчер](https://void-rp.ru/download-launcher)** · **[🗺️ Карта](https://void-rp.ru/map)** · **[💬 Discord](https://discord.gg/Af855xa5wT)** · **[✈️ Telegram](https://t.me/voidRPminecraft)** · **[🟢 Modrinth](https://modrinth.com/plugin/voidrp-ui)**
 
 <sub>VoidRP — твой мир, твои правила</sub>
 

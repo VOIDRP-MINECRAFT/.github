@@ -11,7 +11,7 @@
 |---|---|
 | Баг в коде, мод крашит, API отвечает не то | Issue в нужном репозитории (шаблон «Баг») |
 | Идея или новая фича | Issue с шаблоном «Идея» |
-| Вопрос по игре, донату, аккаунту, бану | [Discord](https://discord.gg/j2Dvxm8E) или [Telegram](https://t.me/voidRPminecraft), не issue |
+| Вопрос по игре, донату, аккаунту, бану | [Discord](https://discord.gg/Af855xa5wT) или [Telegram](https://t.me/voidRPminecraft), не issue |
 | Уязвимость, утечка, обход авторизации | **Только приватно**, см. [SECURITY.md](SECURITY.md) |
 
 Не знаете, какой репозиторий нужен? Карта репозиториев — на

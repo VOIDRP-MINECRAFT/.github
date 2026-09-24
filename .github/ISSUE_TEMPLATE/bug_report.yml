@@ -5,7 +5,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Спасибо за отчёт! Вопросы по игре, аккаунту и донату — в [Discord](https://discord.gg/j2Dvxm8E), не сюда.
+        Спасибо за отчёт! Вопросы по игре, аккаунту и донату — в [Discord](https://discord.gg/Af855xa5wT), не сюда.
         **Уязвимости — только приватно**, см. [SECURITY.md](https://github.com/VOIDRP-MINECRAFT/.github/blob/main/SECURITY.md).
   - type: dropdown
     id: server
