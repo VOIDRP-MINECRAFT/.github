@@ -1,0 +1,56 @@
+name: 🐞 Баг
+description: Что-то работает не так — краш, ошибка, неверное поведение
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за отчёт! Вопросы по игре, аккаунту и донату — в [Discord](https://discord.gg/j2Dvxm8E), не сюда.
+        **Уязвимости — только приватно**, см. [SECURITY.md](https://github.com/VOIDRP-MINECRAFT/.github/blob/main/SECURITY.md).
+  - type: dropdown
+    id: server
+    attributes:
+      label: Где случилось
+      options:
+        - VoidRP (модовый, Mohist 1.21.1)
+        - Origins (ванилла, Paper 26.2)
+        - Сайт void-rp.ru
+        - Лаунчер
+        - Свой сервер (VoidRP UI или другой плагин)
+        - Другое / не знаю
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Версия
+      description: Версия мода/плагина/лаунчера, версия клиента Minecraft, коммит
+      placeholder: "voidrp-ui 0.3.17, клиент 1.21.8, Paper 26.2"
+  - type: textarea
+    id: what
+    attributes:
+      label: Что произошло
+      description: И что вы ожидали вместо этого
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Как воспроизвести
+      placeholder: |
+        1. Зайти на сервер…
+        2. Открыть…
+        3. Нажать…
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи и краш-репорты
+      description: latest.log, crash-report, стектрейс. Уберите токены и пароли!
+      render: shell
+  - type: textarea
+    id: media
+    attributes:
+      label: Скриншоты или видео
+      description: Перетащите файлы сюда

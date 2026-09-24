@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Помощь с игрой, аккаунтом, донатом
+    url: https://discord.gg/j2Dvxm8E
+    about: Вопросы игроков решаются в Discord, а не в issues
+  - name: 📖 Гайды по серверам
+    url: https://void-rp.ru/server-guide
+    about: Как зайти, команды и правила серверов VoidRP и Origins
+  - name: 🔒 Сообщить об уязвимости
+    url: https://github.com/VOIDRP-MINECRAFT/.github/blob/main/SECURITY.md
+    about: Уязвимости — только приватно, не публичным issue
