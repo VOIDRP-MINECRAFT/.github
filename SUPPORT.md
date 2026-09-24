@@ -2,7 +2,7 @@
 
 | Нужно | Куда |
 |---|---|
-| Помощь с игрой, аккаунтом, донатом, лаунчером | [Discord](https://discord.gg/j2Dvxm8E) · [Telegram](https://t.me/voidRPminecraft) |
+| Помощь с игрой, аккаунтом, донатом, лаунчером | [Discord](https://discord.gg/Af855xa5wT) · [Telegram](https://t.me/voidRPminecraft) |
 | Гайды по серверам | [void-rp.ru/server-guide](https://void-rp.ru/server-guide) |
 | Скачать лаунчер | [void-rp.ru/download-launcher](https://void-rp.ru/download-launcher) |
 | Баг в коде или идея | Issue в нужном репозитории, см. [CONTRIBUTING.md](CONTRIBUTING.md) |
