@@ -16,6 +16,8 @@
 
 **[Серверы](#servers)** · **[Как начать](#start)** · **[Скриншоты](#screenshots)** · **[VoidRP UI](#voidrp-ui)** · **[Архитектура](#architecture)** · **[Репозитории](#repositories)** · **[Для разработчиков](#developers)**
 
+<sub>🇬🇧 [English version](README.en.md) · 📚 [Документация для разработчиков](../docs)</sub>
+
 </div>
 
 ---
@@ -49,6 +51,8 @@
 
 **Вход:** через [лаунчер VoidRP](https://void-rp.ru/download-launcher), он сам ставит модпак и Java.
 
+[![онлайн](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.void-rp.ru%2Fapi%2Fv1%2Fserver%2Fstatus%3Fserver%3Dvoidrp&query=%24.players_online&label=%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD&suffix=%20%D0%B8%D0%B3%D1%80%D0%BE%D0%BA%D0%BE%D0%B2&color=16a34a&style=flat-square)](https://void-rp.ru/servers)
+
 </td>
 <td width="50%" valign="top">
 
@@ -67,6 +71,8 @@
 - ⚠️ Приватов нет, но гриф и воровство запрещены правилами
 
 **Адрес:** `origins.void-rp.ru:25567`
+
+[![онлайн](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.void-rp.ru%2Fapi%2Fv1%2Fserver%2Fstatus%3Fserver%3Dorigins&query=%24.players_online&label=%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD&suffix=%20%D0%B8%D0%B3%D1%80%D0%BE%D0%BA%D0%BE%D0%B2&color=16a34a&style=flat-square)](https://void-rp.ru/servers)
 
 </td>
 </tr>
@@ -185,7 +191,10 @@
 ## 🏗️ Архитектура
 
 <div align="center">
-<img src="diagrams/architecture.svg" alt="Архитектура VoidRP" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/architecture-dark.svg">
+  <img src="diagrams/architecture.svg" alt="Архитектура VoidRP" width="100%">
+</picture>
 </div>
 
 <sub>Исходники схем лежат в [`profile/diagrams/*.puml`](diagrams) (PlantUML). На стрелках подписан протокол или секрет, по которому идёт обмен.</sub>
@@ -232,7 +241,10 @@
 - Билет выдаётся только после принятия актуальной оферты и согласия на обработку персональных данных.
 
 <div align="center">
-<img src="diagrams/flow-auth-launch.svg" alt="Логин, синхронизация и вход на сервер" width="85%">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="diagrams/flow-auth-launch-dark.svg">
+  <img src="diagrams/flow-auth-launch.svg" alt="Логин, синхронизация и вход на сервер" width="85%">
+</picture>
 </div>
 
 </details>
@@ -407,6 +419,10 @@ window.webgui.postToServer("buy_clicked", JSON.stringify({ itemId: "iron_sword" 
 ```
 
 </details>
+
+> [!NOTE]
+> Как собрать любой репозиторий, как устроены API, play-ticket и WebGUI — в [документации для разработчиков](../docs).
+> Хотите помочь? [CONTRIBUTING](../CONTRIBUTING.md) · уязвимости — приватно по [SECURITY](../SECURITY.md).
 
 ## 📊 В цифрах
 

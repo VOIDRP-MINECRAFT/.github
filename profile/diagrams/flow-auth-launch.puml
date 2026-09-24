@@ -7,6 +7,46 @@ skinparam ArrowColor #6E40C9
 skinparam sequenceLifeLineBorderColor #8957E5
 skinparam participantBorderColor #8957E5
 skinparam participantBackgroundColor #F6F8FA
+!ifdef DARK
+skinparam backgroundColor #0D1117
+skinparam defaultFontColor #E6EDF3
+skinparam ArrowColor #A78BFA
+skinparam ArrowFontColor #C9D1D9
+skinparam componentBackgroundColor #161B22
+skinparam componentBorderColor #A78BFA
+skinparam componentFontColor #E6EDF3
+skinparam databaseBackgroundColor #1F1640
+skinparam databaseBorderColor #A78BFA
+skinparam nodeBorderColor #8B949E
+skinparam nodeFontColor #E6EDF3
+skinparam nodeBackgroundColor #161B22
+skinparam packageBorderColor #8B949E
+skinparam packageFontColor #E6EDF3
+skinparam cloudBorderColor #8B949E
+skinparam cloudFontColor #E6EDF3
+skinparam folderBackgroundColor #161B22
+skinparam folderBorderColor #8B949E
+skinparam folderFontColor #E6EDF3
+skinparam actorBorderColor #E6EDF3
+skinparam actorBackgroundColor #0D1117
+skinparam actorFontColor #E6EDF3
+skinparam titleFontColor #E6EDF3
+skinparam sequenceLifeLineBorderColor #A78BFA
+skinparam participantBackgroundColor #161B22
+skinparam participantBorderColor #A78BFA
+skinparam participantFontColor #E6EDF3
+skinparam sequenceGroupBackgroundColor #161B22
+skinparam sequenceGroupBodyBackgroundColor #0D1117
+skinparam sequenceGroupBorderColor #8B949E
+skinparam sequenceGroupFontColor #E6EDF3
+skinparam sequenceGroupHeaderFontColor #E6EDF3
+skinparam sequenceDividerBackgroundColor #161B22
+skinparam sequenceDividerBorderColor #8B949E
+skinparam sequenceDividerFontColor #E6EDF3
+skinparam noteBackgroundColor #1F1640
+skinparam noteBorderColor #A78BFA
+skinparam noteFontColor #E6EDF3
+!endif
 title <b>VoidRP — Логин, синхронизация и вход на сервер</b>
 
 actor Игрок as U

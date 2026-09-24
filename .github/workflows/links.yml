@@ -1,0 +1,45 @@
+name: Link check
+
+# Checks every link on the organisation page and in the docs once a week,
+# so a dead Discord invite or a renamed repository does not sit there unnoticed.
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+  pull_request:
+    paths: ['**/*.md']
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --max-retries 3
+            --accept 200,204,206,429
+            --exclude '^https://img\.shields\.io'
+            --exclude '^https://discord\.gg'
+            './**/*.md'
+          fail: true
+
+  discord-invite:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      # discord.gg answers 200 even for a dead invite; the API answers 404.
+      - name: Every Discord invite in the docs is still alive
+        run: |
+          codes=$(grep -rhoE 'discord\.gg/[A-Za-z0-9-]+' --include='*.md' --include='*.yml' . | sort -u | cut -d/ -f2)
+          status=0
+          for code in $codes; do
+            http=$(curl -s -o /dev/null -w '%{http_code}' "https://discord.com/api/v10/invites/$code")
+            echo "discord.gg/$code -> $http"
+            [ "$http" = "200" ] || status=1
+          done
+          exit $status

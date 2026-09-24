@@ -1,5 +1,16 @@
 @startuml VoidRP-Architecture
 !theme plain
+!ifdef DARK
+!$CLIENT = "#1C1530"
+!$CLOUD = "#0F2418"
+!$SRV1 = "#2A1C0B"
+!$SRV2 = "#0E1A2B"
+!else
+!$CLIENT = "#F3EEFB"
+!$CLOUD = "#EAF7EE"
+!$SRV1 = "#FFF4E5"
+!$SRV2 = "#E8F1FB"
+!endif
 skinparam backgroundColor #FFFFFF
 skinparam roundcorner 10
 skinparam shadowing false
@@ -9,11 +20,51 @@ skinparam componentBackgroundColor #F6F8FA
 skinparam componentBorderColor #8957E5
 skinparam databaseBackgroundColor #EDE7F6
 skinparam nodeBorderColor #444C56
+!ifdef DARK
+skinparam backgroundColor #0D1117
+skinparam defaultFontColor #E6EDF3
+skinparam ArrowColor #A78BFA
+skinparam ArrowFontColor #C9D1D9
+skinparam componentBackgroundColor #161B22
+skinparam componentBorderColor #A78BFA
+skinparam componentFontColor #E6EDF3
+skinparam databaseBackgroundColor #1F1640
+skinparam databaseBorderColor #A78BFA
+skinparam nodeBorderColor #8B949E
+skinparam nodeFontColor #E6EDF3
+skinparam nodeBackgroundColor #161B22
+skinparam packageBorderColor #8B949E
+skinparam packageFontColor #E6EDF3
+skinparam cloudBorderColor #8B949E
+skinparam cloudFontColor #E6EDF3
+skinparam folderBackgroundColor #161B22
+skinparam folderBorderColor #8B949E
+skinparam folderFontColor #E6EDF3
+skinparam actorBorderColor #E6EDF3
+skinparam actorBackgroundColor #0D1117
+skinparam actorFontColor #E6EDF3
+skinparam titleFontColor #E6EDF3
+skinparam sequenceLifeLineBorderColor #A78BFA
+skinparam participantBackgroundColor #161B22
+skinparam participantBorderColor #A78BFA
+skinparam participantFontColor #E6EDF3
+skinparam sequenceGroupBackgroundColor #161B22
+skinparam sequenceGroupBodyBackgroundColor #0D1117
+skinparam sequenceGroupBorderColor #8B949E
+skinparam sequenceGroupFontColor #E6EDF3
+skinparam sequenceGroupHeaderFontColor #E6EDF3
+skinparam sequenceDividerBackgroundColor #161B22
+skinparam sequenceDividerBorderColor #8B949E
+skinparam sequenceDividerFontColor #E6EDF3
+skinparam noteBackgroundColor #1F1640
+skinparam noteBorderColor #A78BFA
+skinparam noteFontColor #E6EDF3
+!endif
 title <b>VoidRP — Архитектура платформы</b>
 
 actor "Игрок" as player
 
-package "Клиент" #F3EEFB {
+package "Клиент" $CLIENT {
   component "voidrp-launcher-vue\n<size:10>Electron · Vue 3 · .NET 8</size>" as launcher
   component "voidrp-launcher-java\n<size:10>JavaFX 21 (альтернатива)</size>" as launcherj
   node "Модовый клиент\n<size:10>NeoForge 1.21.1 · FTB Evolution</size>" as mc {
@@ -23,7 +74,7 @@ package "Клиент" #F3EEFB {
   node "Ванильный клиент\n<size:10>1.21.1 – 26.x, любой лаунчер</size>" as vmc
 }
 
-cloud "void-rp.ru" #EAF7EE {
+cloud "void-rp.ru" $CLOUD {
   component "voidrp-site\n<size:10>Vue 3 SPA</size>" as site
   component "minecraft-backend\n<size:10>FastAPI</size>" as backend
   database "PostgreSQL" as pg
@@ -31,13 +82,13 @@ cloud "void-rp.ru" #EAF7EE {
   folder "launcher/pack\n+ manifests" as packs
 }
 
-node "VoidRP — Mohist 1.21.1 (модовый)" as srv1 #FFF4E5 {
+node "VoidRP — Mohist 1.21.1 (модовый)" as srv1 $SRV1 {
   component "gamesync-plugin\n<size:10>статистика · шоп · торговец</size>" as gsync
   component "battlepass / daily-quests\nwealth-tax / mod-sell" as econ
   component "anticheat · auth-bridge · cpm-companion\nasync-ai · wg-region-guard" as srvmods1
 }
 
-node "Origins — Paper 26.2 (ванилла)" as srv2 #E8F1FB {
+node "Origins — Paper 26.2 (ванилла)" as srv2 $SRV2 {
   component "voidrp-auth-plugin\n<size:10>вход окнами Minecraft</size>" as authp
   component "voidrp-ui\n<size:10>меню без модов</size>" as vui
 }
