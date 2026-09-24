@@ -16,7 +16,7 @@
 
 **[Servers](#servers)** · **[Getting started](#start)** · **[Screenshots](#screenshots)** · **[VoidRP UI](#voidrp-ui)** · **[Architecture](#architecture)** · **[Repositories](#repositories)** · **[Developers](#developers)**
 
-<sub>🇷🇺 [Русская версия](https://github.com/VOIDRP-MINECRAFT) · 📚 [Developer docs](https://github.com/VOIDRP-MINECRAFT/.github/tree/main/docs) (Russian)</sub>
+<sub>🇷🇺 [Русская версия](https://github.com/VOIDRP-MINECRAFT) · 📚 [Developer docs](../docs) (Russian)</sub>
 
 </div>
 
@@ -258,7 +258,7 @@ dependencies {
 }
 ```
 
-Issues and pull requests are welcome — see [CONTRIBUTING](https://github.com/VOIDRP-MINECRAFT/.github/blob/main/CONTRIBUTING.md) and [SECURITY](https://github.com/VOIDRP-MINECRAFT/.github/blob/main/SECURITY.md).
+Issues and pull requests are welcome — see [CONTRIBUTING](../CONTRIBUTING.md) and [SECURITY](../SECURITY.md).
 
 ---
 

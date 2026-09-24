@@ -195,4 +195,4 @@ WebActionPollService (раз в секунду): GET /game-sync/market-web-actio
 
 ---
 
-*Подробный план: [WEBGUI_INTEGRATION_PLAN.md](https://github.com/VOIDRP-MINECRAFT/voidrp-gamesync-plugin/blob/main/WEBGUI_INTEGRATION_PLAN.md)*
+*Подробный план: [WEBGUI_INTEGRATION_PLAN.md](https://github.com/VOIDRP-MINECRAFT/voidrp-webgui-neoforge/blob/main/WEBGUI_INTEGRATION_PLAN.md)*

@@ -16,7 +16,7 @@
 
 **[Серверы](#servers)** · **[Как начать](#start)** · **[Скриншоты](#screenshots)** · **[VoidRP UI](#voidrp-ui)** · **[Архитектура](#architecture)** · **[Репозитории](#repositories)** · **[Для разработчиков](#developers)**
 
-<sub>🇬🇧 [English version](https://github.com/VOIDRP-MINECRAFT/.github/blob/main/profile/README.en.md) · 📚 [Документация для разработчиков](https://github.com/VOIDRP-MINECRAFT/.github/tree/main/docs)</sub>
+<sub>🇬🇧 [English version](README.en.md) · 📚 [Документация для разработчиков](../docs)</sub>
 
 </div>
 
@@ -421,8 +421,8 @@ window.webgui.postToServer("buy_clicked", JSON.stringify({ itemId: "iron_sword" 
 </details>
 
 > [!NOTE]
-> Как собрать любой репозиторий, как устроены API, play-ticket и WebGUI — в [документации для разработчиков](https://github.com/VOIDRP-MINECRAFT/.github/tree/main/docs).
-> Хотите помочь? [CONTRIBUTING](https://github.com/VOIDRP-MINECRAFT/.github/blob/main/CONTRIBUTING.md) · уязвимости — приватно по [SECURITY](https://github.com/VOIDRP-MINECRAFT/.github/blob/main/SECURITY.md).
+> Как собрать любой репозиторий, как устроены API, play-ticket и WebGUI — в [документации для разработчиков](../docs).
+> Хотите помочь? [CONTRIBUTING](../CONTRIBUTING.md) · уязвимости — приватно по [SECURITY](../SECURITY.md).
 
 ## 📊 В цифрах
 
