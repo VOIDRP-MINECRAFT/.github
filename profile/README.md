@@ -56,8 +56,8 @@
 </td>
 <td width="50%" valign="top">
 
-<img src="assets/ui-hero.png" alt="VoidRP UI на ванильном клиенте" width="100%">
-<sub>Так выглядит VoidRP UI на ванильном клиенте</sub>
+<img src="assets/origins-home.png" alt="Главная меню Origins на ванильном клиенте" width="100%">
+<sub>Главная меню Origins — ванильный клиент, без модов</sub>
 
 ### 🌱 Origins — ванильное выживание
 
@@ -95,6 +95,29 @@
 <a id="screenshots"></a>
 
 ## 🖼️ Скриншоты из игры
+
+### 🌱 Меню Origins на ванильном клиенте
+
+Настоящие скриншоты с сервера Origins: меню `/меню` на обычном клиенте без модов, нарисованное VoidRP UI. Разделы переключаются кликом, колёсиком или цифрами 1–7.
+
+<div align="center">
+<img src="assets/origins-menu.gif" alt="Разделы меню Origins по очереди" width="100%">
+
+<sub>Главная → гайд → рынок → топ игроков → настройки</sub>
+</div>
+
+<table>
+<tr>
+<td width="50%"><img src="assets/origins-guide.png" alt="Гайд: первые шаги, команды и правила"><br><sub>Гайд: первые шаги, команды и правила</sub></td>
+<td width="50%"><img src="assets/origins-market.png" alt="Рынок игроков — тот же, что на сайте"><br><sub>Рынок игроков — тот же, что на сайте</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="assets/origins-top.png" alt="Топ игроков: богатство, PvP, K/D, шахтёры, строители…"><br><sub>Топ игроков: богатство, PvP, K/D, шахтёры, строители…</sub></td>
+<td width="50%"><img src="assets/origins-settings.png" alt="Настройки: язык RU/EN и форма экрана"><br><sub>Настройки: язык RU/EN и форма экрана</sub></td>
+</tr>
+</table>
+
+### 🧩 VoidRP UI: курсор, темы, компоненты
 
 <div align="center">
 

@@ -57,8 +57,8 @@ The **FTB Evolution** modpack on **Mohist 1.21.1** (NeoForge + Paper).
 </td>
 <td width="50%" valign="top">
 
-<img src="assets/ui-hero.png" alt="VoidRP UI on a vanilla client" width="100%">
-<sub>VoidRP UI on a vanilla client</sub>
+<img src="assets/origins-home.png" alt="Origins menu home on a vanilla client" width="100%">
+<sub>The Origins menu home — a vanilla client, no mods</sub>
 
 ### 🌱 Origins — vanilla survival
 
@@ -95,6 +95,29 @@ Plain **Paper 26.2**: no mods, no modpack, no launcher required.
 <a id="screenshots"></a>
 
 ## 🖼️ In-game screenshots
+
+### 🌱 The Origins menu on a vanilla client
+
+Real screenshots from the Origins server: the `/меню` menu on a plain client with no mods, drawn by VoidRP UI. Sections switch by click, scroll wheel or keys 1–7.
+
+<div align="center">
+<img src="assets/origins-menu.gif" alt="Origins menu sections one by one" width="100%">
+
+<sub>Home → guide → market → top players → settings</sub>
+</div>
+
+<table>
+<tr>
+<td width="50%"><img src="assets/origins-guide.png" alt="Guide: first steps, commands and rules"><br><sub>Guide: first steps, commands and rules</sub></td>
+<td width="50%"><img src="assets/origins-market.png" alt="Player market — the same one as on the website"><br><sub>Player market — the same one as on the website</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="assets/origins-top.png" alt="Top players: richest, PvP, K/D, miners, builders…"><br><sub>Top players: richest, PvP, K/D, miners, builders…</sub></td>
+<td width="50%"><img src="assets/origins-settings.png" alt="Settings: RU/EN language and screen shape"><br><sub>Settings: RU/EN language and screen shape</sub></td>
+</tr>
+</table>
+
+### 🧩 VoidRP UI: cursor, themes, components
 
 <div align="center">
 
