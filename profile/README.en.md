@@ -234,8 +234,8 @@ that did not exist when the pack was made.
 | Paper | [voidrp-gamesync-plugin](https://github.com/VOIDRP-MINECRAFT/voidrp-gamesync-plugin) | Backend sync, modded-item shop, player market, WebGUI bridge, trader |
 | Paper | [voidrp-battlepass](https://github.com/VOIDRP-MINECRAFT/voidrp-battlepass) | Seasons, Free/Premium, 100 levels plus prestige |
 | Paper | [voidrp-daily-quests](https://github.com/VOIDRP-MINECRAFT/voidrp-daily-quests) | Daily quests, the three-day hero trial, deliveries |
-| Paper | [voidrp-wealth-tax](https://github.com/VOIDRP-MINECRAFT/voidrp-wealth-tax) | Progressive wealth tax paid into the nation treasury |
-| Paper | [voidrp-mod-sell](https://github.com/VOIDRP-MINECRAFT/voidrp-mod-sell) | Selling modded items with `/modsell` |
+| Paper | [voidrp-wealth-tax](https://github.com/VOIDRP-MINECRAFT/voidrp-wealth-tax) | Progressive wealth tax that takes money out of the economy, optionally a share to the nation treasury |
+| Paper | [voidrp-mod-sell](https://github.com/VOIDRP-MINECRAFT/voidrp-mod-sell) | Selling modded items with `/modsell` at the server economy prices; counts towards daily quests |
 
 <sub>🗄️ Archived: [voidrp-webgui](https://github.com/VOIDRP-MINECRAFT/voidrp-webgui), the Fabric WebGUI fork replaced by voidrp-webgui-neoforge.</sub>
 

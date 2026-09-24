@@ -352,8 +352,8 @@
 | [**voidrp-gamesync-plugin**](https://github.com/VOIDRP-MINECRAFT/voidrp-gamesync-plugin) | Сердце сервера: синхронизация с бэкендом, прокси-шоп модовых предметов, рынок игроков, WebGUI-мост, торговец, гайд новичка, косметика |
 | [**voidrp-battlepass**](https://github.com/VOIDRP-MINECRAFT/voidrp-battlepass) | Боевой пропуск: сезоны, Free/Premium, 100 уровней и престиж, награды в Void Coins, x2 XP по выходным |
 | [**voidrp-daily-quests**](https://github.com/VOIDRP-MINECRAFT/voidrp-daily-quests) | Ежедневные квесты, трёхдневное «Испытание героя» и задания на доставку, синхронизация с WebGUI |
-| [**voidrp-wealth-tax**](https://github.com/VOIDRP-MINECRAFT/voidrp-wealth-tax) | Прогрессивный налог на богатство, собранное идёт в казну нации |
-| [**voidrp-mod-sell**](https://github.com/VOIDRP-MINECRAFT/voidrp-mod-sell) | Продажа модовых предметов командой `/modsell` с лимитами и засчитыванием в квесты |
+| [**voidrp-wealth-tax**](https://github.com/VOIDRP-MINECRAFT/voidrp-wealth-tax) | Прогрессивный налог на богатство: деньги уходят из экономики, по желанию — доля в казну нации |
+| [**voidrp-mod-sell**](https://github.com/VOIDRP-MINECRAFT/voidrp-mod-sell) | Продажа модовых предметов командой `/modsell` по ценам экономики сервера, с засчитыванием в квесты |
 
 <sub>🗄️ В архиве: [voidrp-webgui](https://github.com/VOIDRP-MINECRAFT/voidrp-webgui), Fabric-форк WebGUI, его заменил voidrp-webgui-neoforge.</sub>
 

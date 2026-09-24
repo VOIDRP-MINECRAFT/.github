@@ -16,7 +16,7 @@ jobs:
   links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: lycheeverse/lychee-action@v2
         with:
           args: >-
@@ -31,7 +31,7 @@ jobs:
   discord-invite:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       # discord.gg answers 200 even for a dead invite; the API answers 404.
       - name: Every Discord invite in the docs is still alive
         run: |
@@ -43,3 +43,27 @@ jobs:
             [ "$http" = "200" ] || status=1
           done
           exit $status
+
+  # A scheduled run that fails opens an issue (or comments on the open one),
+  # so a dead link is noticed without anyone watching the Actions tab.
+  report:
+    needs: [links, discord-invite]
+    if: failure() && github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Open or update the issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="Битые ссылки на странице организации"
+          number=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number')
+          body="Еженедельная проверка ссылок упала: $RUN_URL"
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body"
+          fi
